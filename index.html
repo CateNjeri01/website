@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Caev Technologies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,body{
+      height: 100%;
+      width: 100%;
+      font-family: sans-serif;
+      color: #222;
+
+    }
+    .navbar{
+      padding: .8rem;
+    }
+    .navbar-nav li{
+      padding-right: 20px;
+    }
+    .nav-link {
+       font-size: 1.1cm !important;
+    }
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-caption{
+       position: absolute;
+       top:50%;
+       transform:  translateY(-50%); 
+    }
+    .carousel-caption h1{
+      font-size: 500%;
+      text-shadow: 1px 1px 15px #000;
+    } 
+    .carousel-caption h3{
+      font-size: 200%;
+      font-weight: 500%;
+      text-shadow: 1px 1px 10px #000;
+      padding-bottom: 1rem;
+    }
+    .btn-primary{
+      background-color: #6648b1;
+      border : 1px solid #6648b1;
+    }
+    .btn-primary :hover{
+      background-color: #563d7c;
+      border : 1px solid #563d7c;
+    }
+    .jumbotron{
+      padding: 1rem;
+      border-radius: 0;
+    }
+    .padding{
+      padding-bottom: 2rem;
+    }
+    .welcome{
+      width: 75%;
+      margin: 0 auto;
+      padding-top: 2rem;
+    }
+    .welcome hr{
+      border-top:2px solid #646464;
+      width: 95%;
+      margin-top: .3rem;
+      margin-bottom: 1rem;
+
+    }
+
+      .fa {
+        padding: 50px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+      
+      .fa:hover {
+          opacity: 0.7;
+      }
+      
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+       
+      .fa-twitter {
+        background: #00aced;
+        color: white;
+      }
+      
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+      
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+      
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+      
+      .fa-pinterest {
+        background: #cb2027;
+        color: white;
+      }
+      .fa-skype {
+        background: #00aff0;
+        color: white;
+      }
+      
+   
+      .fa-yahoo {
+        background: #430297;
+        color: white;
+      }
+      .fa-yahoo:hover,
+      .fa-skype:hover ,
+       .fa-pinterest:hover, 
+       .fa-instagram:hover , 
+        .fa-youtube:hover ,
+        .fa-google:hover,
+        .fa-twitter:hover,
+        .fa-facebook:hover{
+          color: #d5d5d5
+        }
+         footer{
+          background-color: #3f3f3f ;
+          color: #d5d5dd;
+          padding-top: 2rem;
+        }
+        .hr-light{
+          border-top: #d5d5d5;
+          width: 75%;
+          margin-top: .8rem;
+          margin-bottom: 1rem
+        }
+        footer a{
+          color: #d5d5d5;
+        }
+     
+
+      * {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+      </style>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+         <div class = "container-fluid">
+           <a class = "navbar-brand" href = "#"><img src="logo.png" height="60px" width="100px" ></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+         <div class = "collapse navbar-collapse" id ="collapsibleNavbar">
+           <ul class = "navbar-nav ml-auto">
+             <li class ="nav-item active">
+               <a class = "nav-link" href = "#">Home</a>
+             </li>
+             <li class ="nav-item">
+                <a class = "nav-link" href = "#">About</a>
+              </li>
+              <li class ="nav-item">
+                  <a class = "nav-link" href = "#">Services</a>
+                </li>
+                <li class ="nav-item">
+                    <a class = "nav-link" href = "#">Team</a>
+                  </li>
+                  <li class ="nav-item">
+                      <a class = "nav-link" href = "#">Contact Us</a>
+                    </li>
+           </ul>
+         </div>
+
+         </div>
+
+</nav>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="first.jpg" alt="Los Angeles">
+        <div class="carousel-caption">
+          <h1 class = "display-2">CAEV TECHNOLOGIES</h1>
+          <h3>Best solutions available in town</h3>
+          <button type = "button" class= "btn btn-outline-light btn-lg" >GET STARTED</button>
+          <button type = "button" class= "btn btn-primary btn-lg" >LOG IN</button>
+      </div>
+    </div>
+      <div class="carousel-item">
+        <img src="second.jpg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img src="third.png" alt="New York">
+      </div>
+    </div>
+  
+  
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+  
+  </div>
+
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Caev Technologies</h1>
+        <p>Logical problem solving has always appealed to us and this explains our interests in mathematics, programming and computing in general. </p>
+      </div>
+    </div>
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+          <div class = "col-12">
+           <h1 class = "display-4">We are your best partners</h1>
+          </div>
+          <hr>
+          <div class = "col-12">
+              <p class = "lead">when you don't create things, you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create</p>
+        </div>
+    </div>
+
+  <div>
+    <div class="container-fluid padding">
+      <div class="row text-center padding">
+        <div class ="col-xs-12 col-sm-12 col-md-4 ">
+             <h3>SOFTWARE DEVELOPMENT</h3>
+             <img class="card-img"src = "software.jpg" >
+             <p>Our clients software desires are our first priority</p>
+        </div>   
+        <div class ="col-xs-12 col-sm-6 col-md-4">
+            <h3>NETWORKING</h3>
+            <img class="card-img"src = "networking.jpg" >
+            <p>Our clients software desires are our first priority</p>
+       </div>  
+       <div class ="col-sm-12 col-md-4">
+          <h3>GENERAL COMPUTER</h3>
+          <img class="card-img"src = "third.png" >
+          <p>Our clients software desires are our first priority</p>
+     </div>   
+        </div> 
+        <hr class = "my-4">
+  </div>
+
+
+  <div class="container-fluid padding">
+      <div class="row padding">
+        <div class ="col-lg-6 ">
+          <h2>The benefits of choosing us...</h2>
+          <p>We offer the best services in town </p>
+          <p>Our team is very determined to satisfy the needs</p>
+          <p>Our prices are very affordable </p>
+          <br>
+          <a href = "#"  class = "btn btn-primary">Learn more</a>
+        </div>
+        <div class = "col-lg">
+          <img src = "choose.jpg" class = "img-fluid"> 
+        </div>
+        </div>
+        </div>
+
+        <hr class = "my-4">
+
+        <figure>
+          <div class = "fixed-wrap">
+            <div id = "fixed">
+            </div>
+          </div>
+        </figure>
+
+        <div class="container-fluid padding">
+            <div class="row welcome text-center">
+              <div class = "col-12">
+                <h1 class ="display-4">Meet the Team</h1>
+              </div>
+                
+              <hr>
+
+              </div>
+              </div>
+
+              <div class="container-fluid padding">
+                  <div class="row padding">
+                    <div class = "col-md-4">
+                      <div class = "card">
+                        <img class = "card-img -top" src="cate.jpg">
+                        <div class = "card-body"></div>
+                        <h4 class = "card-title">Catherine maina</h4>
+                        <p class = "card-text ">Catherine is an experienced web and mobile developer for more than 5 years</p>
+                        <a href = "#" class = "btn btn-outline-light">See profile</a>
+                      </div>
+                    </div>
+                    <div class = "col-md-4">
+                        <div class = "card">
+                          <img class = "card-img -top" src="ev.jpeg">
+                          <div class = "card-body"></div>
+                          <h4 class = "card-title">Clarke Omolo</h4>
+                          <p class = "card-text ">Clarke is an experienced web and mobile developer for more than 5 years</p>
+                          <a href = "#" class = "btn btn-outline-light">See profile</a>
+                        </div>
+                      </div>
+                      <div class = "col-md-4">
+                          <div class = "card">
+                            <img class = "card-img -top" src="raven.jpg">
+                            <div class = "card-body"></div>
+                            <h4 class = "card-title">Raven Kibet</h4>
+                            <p class = "card-text ">Raven is an experienced web and mobile developer for more than 5 years</p>
+                            <a href = "#" class = "btn btn-outline-light">See profile</a>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+
+      <footer>
+      <div class="container-fluid padding">
+      <div class="row text-center padding"> 
+        <div class = "col-12">
+          <h2>Connect </h2>
+        </div>
+        <div class = "col-12 social padding">
+
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-skype"></a>
+            <a href="#" class="fa fa-yahoo"></a>
+
+        </div>
+
+        </div>
+        </div>
+
+      
+            <div class="container-fluid padding">
+            <div class="row text-center ">
+
+              <div class="container">
+                <div style="text-align:center">
+                  <h2>Contact Us</h2>
+                  <p>Swing by for a cup of coffee, or leave us a message:</p>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <img src="map.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <form action="/action_page.php">
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      <label for="country">Country</label>
+                      <select id="country" name="country">
+                        <option value="Kenya">Kenya</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="Uganda">Uganda</option>
+                      </select>
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div>
+                </div>
+              </div> 
+
+    
+       <div class = "container-fluid padding">
+         <div class = "row text-center">
+           <div class = " col-lg-4 col-sm-6">
+             <img src = "logo.png">
+             <hr class = "light">
+             <p>0710431167</p>
+             <p>cavetechnologies@gmail.com</p>
+             <p>10th street Kisumu</p>
+             <p>Kisumu Kenya </p>
+           </div>
+           <div class = "col-md-4 col-sm-6" >
+              <hr class = "light">
+              <h5>Our Hours </h5>
+              <hr class = "light">
+              <p>MONDAY: 8am - 5pm</p>
+              <p>Saturday: 8am - 4pm</p>
+              <p>Sunday: closed</p>
+            </div>
+            <div class = "col-md-4 col-sm-6">
+                <hr class = "light">
+                <h5>Service Area </h5>
+                <hr class = "light">
+                <p>Kisumu Kenya </p>
+                <p>Nyeri Kenya </p>
+                <p>Eldoret Kenya </p>
+              </div>
+          <div class = "col-12">
+            <hr class = "light">
+            <h5>&copy; caevtechnologies.com</h5>
+          </div>
+
+        </div>
+       </div> 
+            
+      </footer>
+
+</body>
+</html> 
